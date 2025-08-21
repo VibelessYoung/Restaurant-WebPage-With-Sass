@@ -14,49 +14,66 @@ $color-gray: rgb(200, 200, 200);
 
 /* HEADER STYLE */
 
-.header{
-    width: 100%;
-    // height: 100vh;
-    background-image: url(../images/bg.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: space-between;
+.hero {
+  background: url("../images/bg.jpeg") center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-    h1{
-        color: $light-color;
-        margin-top: 20px;
-        margin-right: 20px;
-        font-family: "Bitcount Single", system-ui;
-        font-weight: 250;
-        margin-bottom: 20px;
-    }
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
 
-    i{
-        color: $color-yellow;
-        margin-top: 20px;
-        margin-left: 20px;
-        font-size: 30px;
-        border: 3px solid $color-yellow;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        margin-bottom: 20px;
-        transition: outline-color .5s;
-        transition: box-shadow .5s;
-        transition: transform 0.5s ease;
-    }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+}
 
-    i:hover{
-    outline-color: rgb(255, 210, 0);
-    box-shadow: 0px 0px 5px rgb(255, 210, 0),
-    0px 0px 30px rgb(255, 210, 0),
-    0px 0px 90px rgb(255, 210, 0);
-    transform: rotateY(360deg)
-    }
+.hero-icon {
+  font-size: 60px;
+  color: #FFD200;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-nav {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.hero-nav a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+}
+
+.hero-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; left: 0;
+  width: 0; height: 2px;
+  background: #FFD200;
+  transition: 0.3s;
+}
+
+.hero-nav a:hover::after {
+  width: 100%;
 }
 
 /* ABOUT STYLE */
