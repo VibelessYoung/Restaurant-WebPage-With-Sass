@@ -64,35 +64,79 @@
 
 /* FOOTER STYLE */
 .footer {
-  background-color: #262626;
+  background: linear-gradient(180deg, #111, #262626);
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: "Raleway", sans-serif;
 }
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
 .footer h2 {
-  color: #ffffff;
-  font-size: 70px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
+
 .footer p {
-  color: rgb(255, 210, 0);
-  font-size: 25px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
 }
 
-.icons {
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFD200;
+}
+
+.social-icons {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 12px;
 }
 
-.ins {
-  font-size: 40px;
-  color: #833AB4;
-  color: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(210, 39, 83) 100%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%) !important;
+.social-icons a {
+  font-size: 22px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s;
 }
 
-.what {
-  font-size: 40px;
-  color: green;
+.social-icons a:hover {
+  transform: translateY(-4px);
 }
 
-.tel {
-  font-size: 40px;
-  color: aqua;
+.social-icons .fa-instagram:hover {
+  background: linear-gradient(45deg, #feda75, #d62976, #4f5bd5);
+}
+
+.social-icons .fa-whatsapp:hover {
+  background: #25D366;
+}
+
+.social-icons .fa-telegram:hover {
+  background: #0088cc;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
 }/*# sourceMappingURL=style.css.map */
