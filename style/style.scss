@@ -97,6 +97,60 @@ $color-gray: rgb(200, 200, 200);
     max-width: 300px!important;
 }
 
+/* MENU STYLE */
+
+.menu {
+  background: #f9f9f9;
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-dark;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+  }
+
+  .menu-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .menu-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      color: $light-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    &:hover .menu-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+
 /* FOOTER STYLE */
 
 .footer {
